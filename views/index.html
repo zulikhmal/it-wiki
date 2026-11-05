@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT Knowledge Base & SOP Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 IT Knowledge Base & SOP Wiki</h1>
+        <p class="subtitle">Internal Standard Operating Procedures and Troubleshooting Guides</p>
+        
+        <!-- Search Input Bar -->
+        <input type="text" id="searchInput" placeholder="Search SOPs by title or category..." onkeyup="filterDocs()">
+
+        <ul class="doc-list" id="docList">
+            {{DOC_LIST}}
+        </ul>
+    </div>
+
+    <script>
+        function filterDocs() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const list = document.getElementById('docList');
+            const items = list.getElementsByTagName('li');
+
+            for (let i = 0; i < items.length; i++) {
+                const text = items[i].textContent || items[i].innerText;
+                if (text.toLowerCase().includes(input)) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
