@@ -4,7 +4,9 @@
 
 [functions]
   directory = "netlify/functions"
-  included_files = ["docs/*", "views/*"]
+  node_bundler = "esbuild"
+  included_files = ["docs/**/*", "views/**/*"]
+  external_node_modules = ["express", "marked", "gray-matter"]
 
 [[redirects]]
   from = "/*"
