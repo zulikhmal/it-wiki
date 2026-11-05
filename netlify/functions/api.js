@@ -1,7 +1,10 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< agent-marked-via-dynamic-import-6499
+=======
 const { marked } = require('marked');
+>>>>>>> main
 // `marked` is an ES-module-only package, so it must be loaded with a dynamic
 // import() instead of require() (require() of ESM fails in the Netlify runtime).
 let markedPromise;
@@ -12,7 +15,10 @@ const serverless = require('serverless-http');
 });
 
 // View single SOP document
+<<<<<<< agent-marked-via-dynamic-import-6499
+=======
 app.get('/doc/:slug', (req, res) => {
+>>>>>>> main
 app.get('/doc/:slug', async (req, res) => {
     const slug = req.params.slug;
     const targetDocs = fs.existsSync(DOCS_DIR) ? DOCS_DIR : path.join(process.cwd(), 'docs');
