@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting Google Chrome & File Dialog Freezing</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Resolution steps for Google Chrome freezing up, particularly when interacting with file dialogs, downloads, or open dialog boxes.</p>
+<h2>Troubleshooting Steps</h2>
+<h3>1. Clear Browser Cache</h3>
+<p>Purge accumulated cache and site data that may be causing application hangs:</p>
+<ul>
+<li>Press <code>Ctrl + Shift + Delete</code> to open the <em>Clear browsing data</em> menu.</li>
+<li>Select <strong>Cached images and files</strong> and <strong>Cookies and other site data</strong>, then click <strong>Clear data</strong>.</li>
+</ul>
+<h3>2. Isolate the Browser (Cross-Browser Test)</h3>
+<ul>
+<li>Test the same action (such as opening a file download/upload dialog) in an alternative browser like <strong>Microsoft Edge</strong>.</li>
+<li><strong>If Edge works normally:</strong> The issue is isolated specifically to your Google Chrome configuration or profile.</li>
+</ul>
+<h3>3. Remove Problematic Extensions</h3>
+<ul>
+<li>Navigate to <code>chrome://extensions</code> in your address bar.</li>
+<li>Disable or remove third-party extensions (especially file handlers, download managers, or ad blockers) that might be locking system file dialogs.</li>
+</ul>
+<h3>4. Test with a New Chrome Profile</h3>
+<p>If profile data or local preferences are corrupted:</p>
+<ul>
+<li>Click your profile icon in the top right of Chrome, select <strong>Add</strong>, and set up a clean guest or new profile.</li>
+<li>Test if the freezing persists in the new profile environment.</li>
+</ul>
+<h3>5. Check for Corrupted Files in Target Folders</h3>
+<ul>
+<li><strong>Suspect Corrupted Folder Contents:</strong> If Chrome freezes specifically when browsing certain directories (e.g., <em>Downloads</em> or <em>Documents</em>), a corrupted media file, incomplete download, or bad thumbnail cache in that folder may be crashing the Windows shell hook. Clean out or move recent files out of that directory to test.</li>
+</ul>
+<h3>6. Reinstall Chrome (Last Resort)</h3>
+<ul>
+<li>If all else fails, uninstall Google Chrome via Windows Settings, clear lingering app data directories (<code>C:\Users\%username%\AppData\Local\Google\Chrome</code>), and install a fresh copy.</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asset Management Server PC: Maintenance & Quick Reference SOP</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Standard operating procedures and quick reference configuration details for the Asset Management Server PC.</p>
+<h2>1. Remote Support Access (AutoCount Subang TeamViewer)</h2>
+<ul>
+<li><strong>TeamViewer ID / Connection:</strong> Used by the <strong>AutoCount Subang Team</strong> for remote maintenance, inventory system syncing, and accounting software troubleshooting. Ensure TeamViewer is set to start automatically with Windows.</li>
+</ul>
+<h2>2. Network Configuration &amp; Static IP</h2>
+<p>If the LAN adapter is reset, unplugged, or replaced, the server&#39;s static IP address must be re-applied to maintain database connectivity across clients.</p>
+<ul>
+<li><strong>Assigned Static IP Address:</strong> <code>10.11.12.13</code></li>
+<li><strong>Steps to reconfigure after LAN reset:</strong><ol>
+<li>Press <code>Windows Key + R</code>, type <code>ncpa.cpl</code>, and hit Enter to open <strong>Network Connections</strong>.</li>
+<li>Right-click your active Ethernet adapter and select <strong>Properties</strong>.</li>
+<li>Double-click <strong>Internet Protocol Version 4 (TCP/IPv4)</strong>.</li>
+<li>Select <strong>Use the following IP address</strong> and enter:<ul>
+<li><strong>IP address:</strong> <code>10.11.12.13</code></li>
+<li><strong>Subnet mask:</strong> <em>(Set according to your local subnet, e.g., <code>255.255.255.0</code>)</em></li>
+<li><strong>Default gateway:</strong> <em>(Enter your local network gateway)</em></li>
+</ul>
+</li>
+<li>Click <strong>OK</strong> to save changes.</li>
+</ol>
+</li>
+</ul>
+<h2>3. WAMP Server Service Management</h2>
+<p>If local web applications, database tools, or PHP services hosted on the server fail to load:</p>
+<ul>
+<li><strong>Restart WAMP Services:</strong><ol>
+<li>Open the WAMP tray icon (or open <strong>Services</strong> via <code>services.msc</code>).</li>
+<li>Restart the core services to clear cache and restore server connections:<ul>
+<li><code>wampapache64</code> (Apache Web Server)</li>
+<li><code>wampmysqld64</code> (MySQL Database)</li>
+</ul>
+</li>
+<li>Verify that the WAMP icon turns green, indicating all services are running normally.</li>
+</ol>
+</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

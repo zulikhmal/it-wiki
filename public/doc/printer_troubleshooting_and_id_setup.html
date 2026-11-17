@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Printer Troubleshooting, Spooler Management & User ID Setup</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Standard operating procedures for resolving printer job failures, color output issues, and setting up workstation/network printer user IDs.</p>
+<h2>1. Printer Troubleshooting &amp; Job Management</h2>
+<h3>Check Color Settings</h3>
+<ul>
+<li>If color documents print in black and white or incorrect color profiles:<ul>
+<li>Open your print dialogue settings (<code>Ctrl + P</code>), click <strong>Printer Properties</strong> or <strong>Preferences</strong>, and verify that the color mode is set to <strong>Color</strong> (rather than Grayscale or Monochrome).</li>
+<li>Check printer driver settings under Windows <strong>Printers &amp; scanners</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3>Check Own ID / Authentication</h3>
+<ul>
+<li>If print jobs are held in the queue or rejected by network multi-function printers (MFPs):<ul>
+<li>Verify that your correct <strong>User ID</strong>, PIN, or accounting code is entered in the printer driver&#39;s job accounting or authentication tab.</li>
+</ul>
+</li>
+</ul>
+<h3>Restart the Print Spooler Service (Admin Required)</h3>
+<p>If print jobs are stuck in the queue or the printer service is hung:</p>
+<ol>
+<li>Press <code>Windows Key + R</code>, type <code>services.msc</code>, and hit Enter.</li>
+<li>Scroll down to locate <strong>Print Spooler</strong>.</li>
+<li>Right-click <strong>Print Spooler</strong> and select <strong>Restart</strong> (Administrator permissions required).</li>
+<li>Clear any stuck <code>.shd</code> or <code>.spl</code> files from <code>C:\Windows\System32\spool\PRINTERS</code> if jobs remain wedged.</li>
+</ol>
+<h2>2. Printer User ID Creation (Web-Based Portal)</h2>
+<p>If a user cannot authenticate at the network printer or needs a new printing profile set up:</p>
+<ul>
+<li>Use the employee&#39;s official credentials received via the <strong>HR email creation notification</strong>.</li>
+<li>Access the printer&#39;s embedded web management portal (enter the printer&#39;s IP address into a web browser).</li>
+<li>Log in with Admin credentials, navigate to the <strong>User Management / Address Book</strong> section, and create the new user ID matching their assigned email/ID credentials.</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

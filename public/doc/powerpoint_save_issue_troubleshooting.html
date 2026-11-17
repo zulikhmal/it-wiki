@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting Microsoft PowerPoint Save Failures</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Step-by-step diagnostic and resolution guide for Microsoft PowerPoint failing to save presentations.</p>
+<h2>Troubleshooting Steps</h2>
+<h3>1. Scope the Issue (Cross-Application Test)</h3>
+<p>Determine whether the save failure is isolated to PowerPoint or affecting the wider system:</p>
+<ul>
+<li>Try saving a file in <strong>Notepad</strong> or <strong>Microsoft Word</strong>.</li>
+<li><strong>If other apps work fine:</strong> The issue is specific to PowerPoint (corrupted presentation file, temporary file lock, or plugin conflict).</li>
+<li><strong>If other apps fail to save:</strong> The issue is system-wide (check disk storage space, folder permissions, or cloud sync / OneDrive locks).</li>
+</ul>
+<h3>2. Perform a Quick Repair of Microsoft Office</h3>
+<p>If PowerPoint binaries or core components are encountering errors:</p>
+<ol>
+<li>Close all open Microsoft Office applications (Word, Excel, PowerPoint, Outlook).</li>
+<li>Open Windows <strong>Settings &gt; Apps &gt; Installed apps</strong> (or <em>Apps &amp; Features</em>).</li>
+<li>Locate <strong>Microsoft 365</strong> (or your Office installation), click the three dots (<code>...</code>), and select <strong>Modify</strong>.</li>
+<li>Choose <strong>Quick Repair</strong> and let the utility scan and repair corrupted Office files.</li>
+</ol>
+<h3>3. Retest Saving</h3>
+<ul>
+<li>Reopen PowerPoint and attempt to save your presentation again (try saving locally to <code>C:\</code> or <code>Documents</code> first before cloud destinations).</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

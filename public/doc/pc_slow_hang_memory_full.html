@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting Slow Performance, Freezes & High Memory Usage</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>If a Windows PC is running slow, hanging, or reporting full memory, follow this systematic troubleshooting SOP to resolve performance bottlenecks.</p>
+<h2>1. Clear Temporary Files</h2>
+<p>Remove accumulated cache and temporary junk files that clutter storage and RAM:</p>
+<ul>
+<li>Press <code>Windows Key + R</code>, type <code>temp</code>, and delete all files inside the folder (skip any currently in use).</li>
+<li>Press <code>Windows Key + R</code>, type <code>%temp%</code>, and clear out all temporary application files.</li>
+<li>Press <code>Windows Key + R</code>, type <code>prefetch</code>, and clear the folder contents.</li>
+<li>Run <strong>Disk Cleanup</strong> (<code>cleanmgr</code>) on your main drive (<code>C:</code>) to purge system cache, Windows update leftovers, and temporary installation files.</li>
+</ul>
+<h2>2. System File &amp; Image Repair (Command Prompt)</h2>
+<p>Run system integrity checks via elevated Command Prompt (Run as Administrator):</p>
+<ul>
+<li>Run SFC scan first to check and repair corrupted system files:<pre><code class="language-cmd">sfc /scannow
+</code></pre>
+</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting SAP Document Download Block Messages</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Resolution steps for SAP throwing block messages or failing when downloading documents.</p>
+<h2>Cause</h2>
+<p>SAP document download processes and PDF viewer handshakes can trigger security blocks or rendering freezes when browser-level PDF plugins attempt to intercept the file stream directly.</p>
+<h2>Resolution Steps: Remove / Disable Adobe PDF Extension on Chrome</h2>
+<p>If Google Chrome&#39;s built-in or Adobe extension is blocking or hanging SAP file downloads:</p>
+<ol>
+<li>Open <strong>Google Chrome</strong>.</li>
+<li>Navigate to extensions by typing <code>chrome://extensions</code> in the address bar and hitting Enter.</li>
+<li>Locate the <strong>Adobe Acrobat</strong> extension (or any other third-party PDF reader extension) in the list.</li>
+<li>Toggle the switch to <strong>Disable</strong> or click <strong>Remove</strong> to uninstall the extension.</li>
+<li>Restart Chrome and retry downloading your document from SAP.</li>
+</ol>
+
+        </div>
+    </div>
+</body>
+</html>

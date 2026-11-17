@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UniFi Ubiquiti Controller: Port Conflict Troubleshooting & Backup SOP</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Standard operating procedure for resolving UniFi Controller startup port conflicts (specifically port 8880) and managing configuration backups.</p>
+<h2>1. Resolving Port Conflicts on Startup (Port 8880)</h2>
+<p>If the UniFi Controller shows a port error or fails to start up properly during launch:</p>
+<ol>
+<li><p><strong>Find the Process Using the Port via Command Prompt:</strong></p>
+<ul>
+<li>Open Command Prompt as Administrator (<code>Win + X</code> &gt; <em>Command Prompt (Admin)</em>).</li>
+<li>Run the following command to check what application is occupying port 8880:<pre><code class="language-cmd">netstat -ano | findstr :8880
+</code></pre>
+</li>
+<li>Note the PID (Process ID) number shown at the far right of the conflicting line.</li>
+</ul>
+</li>
+<li><p><strong>Terminate the Conflicting Task:</strong></p>
+<ul>
+<li>Open <strong>Task Manager</strong> (<code>Ctrl + Shift + Esc</code>) or check Windows <strong>Services</strong> (<code>services.msc</code>).</li>
+<li>Locate the process or service matching that PID, right-click, and select <strong>End Task</strong> (or stop the service).</li>
+<li>Relaunch the UniFi Controller application.</li>
+</ul>
+</li>
+</ol>
+<h2>2. Controller Configuration Backups &amp; Restoration</h2>
+<p>To backup or migrate your UniFi network configuration:</p>
+<ul>
+<li><strong>Export Settings Only:</strong><ol>
+<li>Open the UniFi Controller dashboard.</li>
+<li>Navigate to <strong>Settings &gt; System &gt; Backups</strong>.</li>
+<li>Click <strong>Download</strong> and select <strong>Settings Only</strong> to export a lightweight configuration backup file.</li>
+</ol>
+</li>
+<li><strong>Import / Restore Settings:</strong><ul>
+<li>On a fresh or reset UniFi Controller instance, navigate to the same backup section and click <strong>Restore</strong>, then upload your saved configuration file.</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

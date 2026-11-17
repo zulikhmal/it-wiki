@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting VPN Connection Failures & Network Adapters</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Step-by-step diagnostic and resolution guide for resolving VPN connection failures and virtual network adapter issues.</p>
+<h2>1. Initial Internet &amp; Browser Check</h2>
+<ul>
+<li><strong>Test Google Chrome Connectivity:</strong> Open Google Chrome and verify whether web services like Gmail load successfully. If web traffic is blocked entirely, the underlying internet connection or gateway needs to be fixed before the VPN can establish a tunnel.</li>
+</ul>
+<h2>2. Network Adapter Power Cycle (PANG Adapter)</h2>
+<ul>
+<li><strong>Toggle Adapter State:</strong> <ol>
+<li>Open Network Connections (<code>ncpa.cpl</code>).</li>
+<li>Locate your VPN/virtual network adapter (<strong>PANG</strong>), right-click, and select <strong>Disable</strong>.</li>
+<li>Wait a few seconds, then right-click and select <strong>Enable</strong>.</li>
+</ol>
+</li>
+</ul>
+<h2>3. Network Driver Reinstallation (Auto-Disabling Fix)</h2>
+<ul>
+<li><strong>Reinstall Driver &amp; Restart:</strong> If the network adapter continually disables itself automatically:<ol>
+<li>Open <strong>Device Manager</strong>.</li>
+<li>Expand <strong>Network adapters</strong>, right-click the virtual or physical adapter, and select <strong>Uninstall device</strong>.</li>
+<li><strong>Restart your laptop</strong> so Windows can automatically reinstall a clean, working instance of the driver upon reboot.</li>
+</ol>
+</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

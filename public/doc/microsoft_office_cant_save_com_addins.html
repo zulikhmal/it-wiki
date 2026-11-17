@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting Microsoft Office Save Failures & COM Add-ins</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Resolution steps for Microsoft Office applications (Word, Excel, PowerPoint) failing to save files due to interfering third-party plugins.</p>
+<h2>Cause</h2>
+<p>When Microsoft Office apps throw save errors, freeze during saving, or refuse to save files locally or to the cloud, it is frequently caused by buggy or outdated third-party COM Add-ins locking the file save pipeline.</p>
+<h2>Troubleshooting Steps: Check and Remove COM Add-ins</h2>
+<ol>
+<li><p><strong>Open the Application in Safe Mode (Optional diagnostic step):</strong></p>
+<ul>
+<li>Press <code>Windows Key + R</code>, type <code>excel /safe</code> (or <code>winword /safe</code>), and hit Enter to test if saving works without add-ins loaded.</li>
+</ul>
+</li>
+<li><p><strong>Access COM Add-ins Settings:</strong></p>
+<ul>
+<li>Open the affected Microsoft Office app (e.g., Excel or Word).</li>
+<li>Go to <strong>File &gt; Options</strong>.</li>
+<li>In the left-hand menu, click on <strong>Add-ins</strong>.</li>
+<li>At the bottom of the window, look for the <strong>Manage</strong> dropdown menu, select <strong>COM Add-ins</strong>, and click <strong>Go...</strong></li>
+</ul>
+</li>
+<li><p><strong>Disable or Remove Interfering Add-ins:</strong></p>
+<ul>
+<li>Review the list of active COM Add-ins.</li>
+<li>Uncheck suspicious, outdated, or unnecessary third-party add-ins (such as old PDF converters, third-party macro tools, or enterprise extensions).</li>
+<li>Click <strong>OK</strong> and restart the Office application.</li>
+<li>Test saving your document. If successful, re-enable add-ins one by one to identify the exact culprit, then permanently <strong>Remove</strong> it.</li>
+</ul>
+</li>
+</ol>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting SAP 'Server Busy' Error During Excel Upload</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Resolution steps for SAP throwing a &quot;Server Busy&quot; message or freezing when attempting to upload data from an Excel spreadsheet.</p>
+<h2>Cause</h2>
+<p>This error typically occurs when SAP GUI attempts to access an Excel file handle that is already locked, open, or actively being edited in the background, causing a COM automation deadlock between Microsoft Excel and SAP.</p>
+<h2>Troubleshooting Steps</h2>
+<h3>1. Terminate Hanging SAP Processes via Task Manager</h3>
+<p>If SAP GUI is frozen and unresponsive to the busy prompt:</p>
+<ol>
+<li>Press <code>Ctrl + Shift + Esc</code> to open <strong>Task Manager</strong>.</li>
+<li>Locate <strong>SAP Logon</strong> or any running SAP GUI processes (<code>saplogon.exe</code>, <code>sapgui.exe</code>).</li>
+<li>Right-click the process and select <strong>End Task</strong> to force-close the hung session.</li>
+<li>Relaunch SAP and log back in.</li>
+</ol>
+<h3>2. Close Excel Files Prior to Upload</h3>
+<ul>
+<li><strong>Always close the target Excel workbook</strong> before initiating the upload or data transfer process inside SAP.</li>
+<li>Leaving the file open in Excel locks the file stream and prevents SAP from reading the data table properly via background automation interfaces. Close Excel, then retry your SAP upload.</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

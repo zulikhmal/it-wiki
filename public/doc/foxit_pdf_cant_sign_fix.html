@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting Foxit PDF Digital Signature Issues (PDF/A Mode)</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Resolution steps for Foxit PDF Reader/Editor failing to apply digital signatures or locking documents against signing.</p>
+<h2>Cause</h2>
+<p>When Foxit PDF is set to enforce PDF/A viewing compliance mode, the document structure is restricted to read-only archiving standards, which blocks editing, form filling, and applying digital signatures.</p>
+<h2>Resolution Steps</h2>
+<p>To disable PDF/A View Mode and allow document signing:</p>
+<ol>
+<li>Open <strong>Foxit PDF</strong>.</li>
+<li>Go to <strong>File &gt; Preferences</strong>.</li>
+<li>In the preferences sidebar, select <strong>Documents</strong>.</li>
+<li>Locate the <strong>PDF/A Viewmode</strong> section.</li>
+<li>Change the dropdown setting to <strong>Never</strong>.</li>
+<li>Click <strong>OK</strong> to save changes, then reopen your PDF and attempt to sign again.</li>
+</ol>
+
+        </div>
+    </div>
+</body>
+</html>

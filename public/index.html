@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT Knowledge Base & SOP Wiki</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Category Tabs Styling */
+        .category-tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .tab-btn {
+            background-color: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #334155;
+            transition: all 0.2s ease;
+        }
+        .tab-btn:hover {
+            background-color: #e2e8f0;
+        }
+        .tab-btn.active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 IT Knowledge Base & SOP Wiki</h1>
+        <p class="subtitle">Internal Standard Operating Procedures and Troubleshooting Guides</p>
+
+        <!-- Category Filter Tabs -->
+        <div class="category-tabs" id="categoryTabs">
+            <button class="tab-btn active" onclick="filterByCategory('all', this)">All</button>
+            <!-- Dynamic category buttons will populate here -->
+        </div>
+
+        <!-- Search Input Bar -->
+        <input type="text" id="searchInput" placeholder="Search SOPs by title or category..." onkeyup="filterDocs()">
+
+        <ul class="doc-list" id="docList">
+            
+    <li>
+        <a href="/doc/asset_management_server_pc_sop.html">
+            <span class="title">Asset Management Server PC: Maintenance & Quick Reference SOP</span>
+            <span class="badge">Delfi Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/browser_process_high_resource_usage.html">
+            <span class="title">Troubleshooting High Browser Process & CPU/Memory Usage</span>
+            <span class="badge">Browser Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/cctv_recording_sync_reolink_sop.html">
+            <span class="title">Troubleshooting CCTV Recording & Folder Synchronization (Reolink)</span>
+            <span class="badge">Delfi Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/chrome_browser_freezing_troubleshooting.html">
+            <span class="title">Troubleshooting Google Chrome & File Dialog Freezing</span>
+            <span class="badge">Browser Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/chrome_dns_connectivity_fix.html">
+            <span class="title">Troubleshooting Google Chrome Network & DNS Access Issues (Gmail/Drive)</span>
+            <span class="badge">Browser Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/display_flickering_freezes.html">
+            <span class="title">Troubleshooting Display Flickering & Freezes</span>
+            <span class="badge">Windows Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/file_explorer_loading.html">
+            <span class="title">File Explorer Endless Loading & Freezing</span>
+            <span class="badge">Windows Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/file_explorer_pdf_crash_fix.html">
+            <span class="title">File Explorer PDF Crash Fix</span>
+            <span class="badge">Windows Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/file_explorer_pdf_xchange_preview_fix.html">
+            <span class="title">File Explorer PDF-XChange Preview Fix</span>
+            <span class="badge">Windows Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/foxit_pdf_cant_sign_fix.html">
+            <span class="title">Troubleshooting Foxit PDF Digital Signature Issues (PDF/A Mode)</span>
+            <span class="badge">Pdf Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/google_chrome_all_tabs_loading.html">
+            <span class="title">Troubleshooting Google Chrome All Tabs Infinite Loading</span>
+            <span class="badge">Browser Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/google_chrome_not_responding.html">
+            <span class="title">Troubleshooting Google Chrome Not Responding & Freezing</span>
+            <span class="badge">Browser Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/google_workspace_outlook_sync_troubleshooting.html">
+            <span class="title">Troubleshooting Google Workspace Sync Issues in Outlook (Email & Calendar)</span>
+            <span class="badge">GWS Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/laptop_wont_turn_on_ignored_update.html">
+            <span class="title">Troubleshooting Laptop Won't Turn On After Ignoring System Updates</span>
+            <span class="badge">Windows Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/microsoft_office_cant_save_com_addins.html">
+            <span class="title">Troubleshooting Microsoft Office Save Failures & COM Add-ins</span>
+            <span class="badge">Microsoft Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/pc_slow_hang_memory_full.html">
+            <span class="title">Troubleshooting Slow Performance, Freezes & High Memory Usage</span>
+            <span class="badge">Windows Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/pdf_application_crash_troubleshooting.html">
+            <span class="title">Troubleshooting PDF Reader & Application Crashes</span>
+            <span class="badge">Pdf Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/powerpoint_save_issue_troubleshooting.html">
+            <span class="title">Troubleshooting Microsoft PowerPoint Save Failures</span>
+            <span class="badge">Microsoft Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/powerpoint_text_missing_and_symbols_fix.html">
+            <span class="title">Troubleshooting PowerPoint Missing Text & Font Symbol Corruption</span>
+            <span class="badge">Microsoft Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/printer_troubleshooting_and_id_setup.html">
+            <span class="title">Printer Troubleshooting, Spooler Management & User ID Setup</span>
+            <span class="badge">Printer Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/sap_download_block_message_fix.html">
+            <span class="title">Troubleshooting SAP Document Download Block Messages</span>
+            <span class="badge">Delfi Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/sap_server_busy_excel_upload.html">
+            <span class="title">Troubleshooting SAP 'Server Busy' Error During Excel Upload</span>
+            <span class="badge">Delfi Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/touchpad_keyboard_brightness_troubleshooting.html">
+            <span class="title">Troubleshooting Touchpad, Keyboard & Brightness Key Issues</span>
+            <span class="badge">Windows Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/unifi_port_conflict_and_backup_sop.html">
+            <span class="title">UniFi Ubiquiti Controller: Port Conflict Troubleshooting & Backup SOP</span>
+            <span class="badge">Delfi Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/vpn_connection_troubleshooting.html">
+            <span class="title">Troubleshooting VPN Connection Failures & Network Adapters</span>
+            <span class="badge">Delfi Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/whatsapp_web_infinite_loading.html">
+            <span class="title">Troubleshooting WhatsApp Web Endless Loading When Sending Messages</span>
+            <span class="badge">Browser Issue</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="/doc/windows_slowness_and_update_check.html">
+            <span class="title">Troubleshooting Windows Slowness & Update Checks</span>
+            <span class="badge">Windows Issue</span>
+        </a>
+    </li>
+
+        </ul>
+    </div>
+
+    <script>
+        let currentCategory = 'all';
+
+        // Auto-generate category tabs on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const list = document.getElementById('docList');
+            const items = list.getElementsByTagName('li');
+            const categories = new Set();
+
+            for (let i = 0; i < items.length; i++) {
+                const badge = items[i].querySelector('.badge');
+                if (badge) {
+                    categories.add(badge.textContent.trim());
+                }
+            }
+
+            const tabsContainer = document.getElementById('categoryTabs');
+            categories.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = 'tab-btn';
+                btn.textContent = cat;
+                btn.onclick = (e) => filterByCategory(cat, e.target);
+                tabsContainer.appendChild(btn);
+            });
+        });
+
+        // Filter by Category Tab
+        function filterByCategory(category, btnElement) {
+            currentCategory = category;
+            
+            // Update active styles on buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            applyFilters();
+        }
+
+        // Combined Filter (Search + Category)
+        function filterDocs() {
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const list = document.getElementById('docList');
+            const items = list.getElementsByTagName('li');
+
+            for (let i = 0; i < items.length; i++) {
+                const text = items[i].textContent || items[i].innerText;
+                const badge = items[i].querySelector('.badge');
+                const catText = badge ? badge.textContent.trim() : '';
+
+                const matchesSearch = text.toLowerCase().includes(searchInput);
+                const matchesCategory = (currentCategory === 'all' || catText === currentCategory);
+
+                if (matchesSearch && matchesCategory) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

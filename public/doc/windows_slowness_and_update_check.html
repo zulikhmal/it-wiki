@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting Windows Slowness & Update Checks</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Resolution steps for general Windows sluggishness, cache cleaning, and verifying Windows Update configurations.</p>
+<h2>1. System Cleaning</h2>
+<p>Purge unnecessary temporary files and cache to free up system resources:</p>
+<ul>
+<li>Perform standard temporary file cleanups (<code>temp</code>, <code>%temp%</code>, <code>prefetch</code>, and Disk Cleanup) to remove accumulated junk data.</li>
+</ul>
+<h2>2. Windows Update Verification</h2>
+<p>Check and ensure the system is up to date or that update services are running properly:</p>
+<ul>
+<li>Go to <strong>Settings &gt; Windows Update</strong> and check for available updates.</li>
+<li><strong>If updates are missing or failing to check:</strong> Verify that the <strong>Windows Update</strong> service is enabled and running:<ol>
+<li>Press <code>Windows Key + R</code>, type <code>services.msc</code>, and hit Enter.</li>
+<li>Locate <strong>Windows Update</strong> in the list, right-click, and select <strong>Properties</strong>.</li>
+<li>Set the <strong>Startup type</strong> to <em>Automatic</em>, click <strong>Start</strong> (if stopped), and click <strong>Apply</strong> and <strong>OK</strong>.</li>
+</ol>
+</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

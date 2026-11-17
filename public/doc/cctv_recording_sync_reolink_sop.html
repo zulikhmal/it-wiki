@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting CCTV Recording & Folder Synchronization (Reolink)</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Standard operating procedure for resolving CCTV camera recording failures and synchronization issues with local storage folders.</p>
+<h2>Resolution Steps: Run Reolink Desktop Batch Script</h2>
+<p>If CCTV feeds fail to record locally or stop synchronizing recorded video files to their designated shared folders:</p>
+<ol>
+<li>Access the workstation desktop.</li>
+<li>Locate and execute the automated batch sync utility shortcut:<ul>
+<li><strong>Batch Script Name:</strong> <code>batchrun Reolink</code> (located on the Desktop).</li>
+</ul>
+</li>
+<li>Double-click the batch file to run it with elevated permissions. This script will restart background camera polling services, clear temporary IPC cache, and re-establish write permissions to the destination sync folder.</li>
+<li>Verify that new video files begin populating in the target directory after execution.</li>
+</ol>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Explorer Endless Loading & Freezing</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <h1>File Explorer Endless Loading &amp; Freezing</h1>
+<p>Troubleshooting steps to resolve a hanging or permanently loading Windows File Explorer without needing to perform a full system reboot.</p>
+<h2>Symptoms</h2>
+<ul>
+<li>The File Explorer window opens, but the address bar keeps loading infinitely (green loading bar across the top).</li>
+<li>Desktop icons or the taskbar become unresponsive.</li>
+</ul>
+<hr>
+<h2>Resolution Steps</h2>
+<h3>Method 1: Restart Windows Explorer via Task Manager (Quickest Fix)</h3>
+<ol>
+<li>Press <strong>Ctrl + Shift + Esc</strong> on your keyboard to open <strong>Task Manager</strong>.</li>
+<li>If Task Manager opens in compact view, click <strong>More details</strong> at the bottom.</li>
+<li>Under the <strong>Processes</strong> tab, scroll down to find <strong>Windows Explorer</strong> (or press the <code>W</code> key to jump down).</li>
+<li>Right-click on <strong>Windows Explorer</strong> and select <strong>Restart</strong>.<ul>
+<li><em>Note: Your taskbar, desktop background, and open file windows will disappear for 2 to 3 seconds while it reboots.</em></li>
+</ul>
+</li>
+</ol>
+<h3>Method 2: Clear File Explorer History</h3>
+<p>If the issue persists after restarting the process:</p>
+<ol>
+<li>Open the Start menu, type <strong>File Explorer Options</strong>, and hit Enter.</li>
+<li>Under the <strong>General</strong> tab, look at the <strong>Privacy</strong> section at the bottom.</li>
+<li>Click the <strong>Clear</strong> button next to <em>Clear File Explorer history</em>.</li>
+<li>Click <strong>Apply</strong> and <strong>OK</strong>, then restart Windows Explorer again using Method 1.</li>
+</ol>
+<h3>Method 3: Check for Corrupt System Files</h3>
+<p>If File Explorer keeps freezing regularly:</p>
+<ol>
+<li>Open the Start menu, type <code>cmd</code>, right-click <strong>Command Prompt</strong>, and select <strong>Run as administrator</strong>.</li>
+<li>Type the following command and press Enter:<pre><code class="language-cmd">sfc /scannow
+</code></pre>
+</li>
+</ol>
+
+        </div>
+    </div>
+</body>
+</html>

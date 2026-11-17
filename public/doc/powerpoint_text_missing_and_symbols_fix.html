@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting PowerPoint Missing Text & Font Symbol Corruption</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <p>Resolution steps for Microsoft PowerPoint slides displaying missing text or turning text into unreadable symbols/glyphs.</p>
+<h2>1. PowerPoint Text Missing</h2>
+<p>If text boxes are blank or specific text is missing from slides:</p>
+<ul>
+<li><strong>Check File Settings / Display Options:</strong> Go to <strong>File &gt; Options &gt; Advanced</strong>, look for the <em>Display</em> section, and toggle options related to hardware graphics acceleration or image compression that might be hiding text elements.</li>
+<li><strong>Reinstall Microsoft Office:</strong> If core application binaries or rendering files are corrupted, run a full Online Repair or reinstall Microsoft 365 / Office via Windows settings.</li>
+</ul>
+<h2>2. PowerPoint Text Turns into Symbols</h2>
+<p>If regular text unexpectedly renders as strange symbols or Wingdings-style characters, it is usually caused by a corrupted Windows font cache:</p>
+<ul>
+<li><strong>Clear the Windows Font Cache:</strong><ol>
+<li>Open <strong>File Explorer</strong> and navigate to the following system path:<pre><code class="language-text">C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache
+</code></pre>
+<em>(Note: You may need to enable &quot;Show hidden files, folders, and drives&quot; in File Explorer view settings to access this directory).</em></li>
+<li>Stop any running font-related services or restart your PC into <strong>Safe Mode</strong> if files are locked.</li>
+<li>Clear or delete the cached <code>.dat</code> font cache files to force Windows to rebuild a clean font registry upon restart.</li>
+</ol>
+</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>
