@@ -1,6 +1,6 @@
 ---
 title: File Explorer Endless Loading & Freezing
-category: Windows Operating System
+category: Windows Issue
 author: Admin
 date: 2026-11-05
 ---

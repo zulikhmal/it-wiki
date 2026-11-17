@@ -4,12 +4,46 @@
     <meta charset="UTF-8">
     <title>IT Knowledge Base & SOP Wiki</title>
     <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Category Tabs Styling */
+        .category-tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .tab-btn {
+            background-color: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: #334155;
+            transition: all 0.2s ease;
+        }
+        .tab-btn:hover {
+            background-color: #e2e8f0;
+        }
+        .tab-btn.active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>📚 IT Knowledge Base & SOP Wiki</h1>
         <p class="subtitle">Internal Standard Operating Procedures and Troubleshooting Guides</p>
-        
+
+        <!-- Category Filter Tabs -->
+        <div class="category-tabs" id="categoryTabs">
+            <button class="tab-btn active" onclick="filterByCategory('all', this)">All</button>
+            <!-- Dynamic category buttons will populate here -->
+        </div>
+
         <!-- Search Input Bar -->
         <input type="text" id="searchInput" placeholder="Search SOPs by title or category..." onkeyup="filterDocs()">
 
@@ -19,14 +53,61 @@
     </div>
 
     <script>
+        let currentCategory = 'all';
+
+        // Auto-generate category tabs on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const list = document.getElementById('docList');
+            const items = list.getElementsByTagName('li');
+            const categories = new Set();
+
+            for (let i = 0; i < items.length; i++) {
+                const badge = items[i].querySelector('.badge');
+                if (badge) {
+                    categories.add(badge.textContent.trim());
+                }
+            }
+
+            const tabsContainer = document.getElementById('categoryTabs');
+            categories.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = 'tab-btn';
+                btn.textContent = cat;
+                btn.onclick = (e) => filterByCategory(cat, e.target);
+                tabsContainer.appendChild(btn);
+            });
+        });
+
+        // Filter by Category Tab
+        function filterByCategory(category, btnElement) {
+            currentCategory = category;
+            
+            // Update active styles on buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            applyFilters();
+        }
+
+        // Combined Filter (Search + Category)
         function filterDocs() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
             const list = document.getElementById('docList');
             const items = list.getElementsByTagName('li');
 
             for (let i = 0; i < items.length; i++) {
                 const text = items[i].textContent || items[i].innerText;
-                if (text.toLowerCase().includes(input)) {
+                const badge = items[i].querySelector('.badge');
+                const catText = badge ? badge.textContent.trim() : '';
+
+                const matchesSearch = text.toLowerCase().includes(searchInput);
+                const matchesCategory = (currentCategory === 'all' || catText === currentCategory);
+
+                if (matchesSearch && matchesCategory) {
                     items[i].style.display = "";
                 } else {
                     items[i].style.display = "none";
