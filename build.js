@@ -7,12 +7,10 @@ const DOCS_DIR = path.join(__dirname, 'docs');
 const VIEWS_DIR = path.join(__dirname, 'views');
 const OUT_DIR = path.join(__dirname, 'public');
 
-// Ensure public directory exists
 if (!fs.existsSync(OUT_DIR)) {
     fs.mkdirSync(OUT_DIR, { recursive: true });
 }
 
-// Read all markdown documents
 const files = fs.readdirSync(DOCS_DIR);
 const docs = files
     .filter(file => file.endsWith('.md'))
@@ -28,7 +26,7 @@ const docs = files
         };
     });
 
-// 1. Build Index Page (index.html)
+// 1. Build Document List HTML with category badges
 const listHtml = docs.map(d => `
     <li>
         <a href="/doc/${d.slug}.html">
