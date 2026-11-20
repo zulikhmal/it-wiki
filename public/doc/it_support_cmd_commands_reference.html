@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IT Support CMD Commands Reference</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Wiki Index</a>
+        <div class="markdown-body">
+            <h1>IT Support CMD Commands Reference</h1>
+<p>Standard reference guide for essential Windows Command Prompt (<code>cmd</code>) commands used in daily IT troubleshooting and system maintenance.</p>
+<h2>1. Network Troubleshooting</h2>
+<ul>
+<li><strong>Check IP Configuration:</strong> <code>ipconfig /all</code></li>
+<li><strong>Release &amp; Renew IP:</strong> <code>ipconfig /release</code> followed by <code>ipconfig /renew</code></li>
+<li><strong>Flush DNS Cache:</strong> <code>ipconfig /flushdns</code></li>
+<li><strong>Test Connectivity:</strong> <code>ping &lt;IP_or_Domain&gt;</code> (use <code>-t</code> for continuous ping)</li>
+<li><strong>Trace Network Path:</strong> <code>tracert &lt;IP_or_Domain&gt;</code></li>
+<li><strong>DNS Lookup:</strong> <code>nslookup &lt;Domain&gt;</code></li>
+<li><strong>View Active Connections:</strong> <code>netstat -ano</code></li>
+</ul>
+<h2>2. System &amp; Disk Repair</h2>
+<ul>
+<li><strong>System File Checker:</strong> <code>sfc /scannow</code> (Scans and repairs corrupted Windows system files)</li>
+<li><strong>DISM Health Restore:</strong> <code>DISM /Online /Cleanup-Image /RestoreHealth</code> (Repairs Windows image)</li>
+<li><strong>Check Disk:</strong> <code>chkdsk C: /f /r</code> (Checks for disk errors and bad sectors; requires reboot)</li>
+</ul>
+<h2>3. Group Policy &amp; User Management</h2>
+<ul>
+<li><strong>Force Group Policy Update:</strong> <code>gpupdate /force</code></li>
+<li><strong>View Applied Policies:</strong> <code>gpresult /r</code></li>
+<li><strong>Check Current User &amp; Domain:</strong> <code>whoami</code></li>
+<li><strong>View User Account Details:</strong> <code>net user &lt;Username&gt; /domain</code></li>
+</ul>
+<h2>4. File &amp; Process Management</h2>
+<ul>
+<li><strong>Force Delete File:</strong> <code>del /f /q /a &quot;Path\target_file&quot;</code></li>
+<li><strong>Force Delete Folder:</strong> <code>rmdir /s /q &quot;Path\target_folder&quot;</code></li>
+<li><strong>List Running Processes:</strong> <code>tasklist</code></li>
+<li><strong>Force Kill Process:</strong> <code>taskkill /F /IM &lt;process_name.exe&gt;</code> (or <code>/PID &lt;Process_ID&gt;</code>)</li>
+</ul>
+<h2>5. System Information &amp; Power</h2>
+<ul>
+<li><strong>Detailed System Specs:</strong> <code>systeminfo</code></li>
+<li><strong>Generate Battery Report:</strong> <code>powercfg /batteryreport</code></li>
+<li><strong>Immediate Restart:</strong> <code>shutdown /r /t 0</code></li>
+<li><strong>Immediate Shutdown:</strong> <code>shutdown /s /t 0</code></li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>
