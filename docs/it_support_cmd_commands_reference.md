@@ -1,6 +1,6 @@
 ---
 title: IT Support CMD Commands Reference
-category: Troubleshooting
+category: CMD Reference
 author: Admin
 date: 2026-11-20
 ---
